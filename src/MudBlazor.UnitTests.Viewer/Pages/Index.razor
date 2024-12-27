@@ -43,11 +43,11 @@
 
                 <div class="d-flex flex-row align-center gap-2">
                     <MudTextField T="string" @bind-Value="@_currentSearchText" Immediate="true" FullWidth="true"
-                    Typo="Typo.subtitle1" Placeholder="Search by component" Clearable DebounceInterval="200" />
+                                  Typo="Typo.subtitle1" Placeholder="Search by component" Clearable DebounceInterval="200" />
 
                     <MudTooltip Text="@(_expandedState ? "Collapse all" : "Expand all")">
                         <MudIconButton Icon="@(_expandedState ? CollapseAllIcon : ExpandAllIcon)" Size="Size.Small"
-                        OnClick="@(() => ToggleExpanded())" />
+                                       OnClick="@(() => ToggleExpanded())" />
                     </MudTooltip>
                 </div>
             </MudDrawerHeader>
@@ -64,7 +64,7 @@
                             @foreach (var type in typesInDir)
                             {
                                 <MudNavLink Class="@(_selectedType == type ? "mode-links active" : "")"
-                                OnClick="@(() => _selectedType = type)" @key="type.Name">@type.Name</MudNavLink>
+                                            OnClick="@(() => _selectedType = type)" @key="type.Name">@type.Name</MudNavLink>
                             }
                         </MudNavGroup>
                     }
@@ -105,40 +105,40 @@
 </MudLayout>
 <style>
     .docs-search-bar .mud-input {
-    height: 42px;
+        height: 42px;
     }
 
     .docs-search-bar.mud-input-control {
-    background-color: rgba(255,255,255,.15);
-    margin-bottom: 5px;
-    height: 42px;
-    border-radius: var(--mud-default-borderradius);
+        background-color: rgba(255,255,255,.15);
+        margin-bottom: 5px;
+        height: 42px;
+        border-radius: var(--mud-default-borderradius);
     }
 
     .docs-search-bar.mud-input-control .mud-input-root, .docs-search-bar.mud-input-control .mud-icon-default {
-    color: #fafafa;
+        color: #fafafa;
     }
 
     .docs-search-bar .mud-input.mud-input-outlined .mud-input-outlined-border {
-    border: none;
-    border-radius: var(--mud-default-borderradius);
+        border: none;
+        border-radius: var(--mud-default-borderradius);
     }
 
     .mode-links.active {
-    color: var(--mud-palette-primary);
-    background-color: var(--mud-palette-primary-hover)
+        color: var(--mud-palette-primary);
+        background-color: var(--mud-palette-primary-hover);
     }
 
     .mud-nav-link {
-    padding: 4px;
+        padding: 4px;
     }
 
     .mud-collapse-container {
-    transition-duration: 100ms;
+        transition-duration: 100ms;
     }
 
     .mud-appbar .mud-icon-button {
-    color: var(--mud-palette-appbar-text) !important;
+        color: var(--mud-palette-appbar-text) !important;
     }
 </style>
 
